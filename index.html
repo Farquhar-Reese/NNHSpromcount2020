@@ -1,0 +1,510 @@
+<html>
+<style type="text/css">
+    @media only screen and (max-width: 61.25em){
+         body {
+   margin:0;
+   top: 0;
+   padding:0;
+   height:100%;
+}
+#container {
+   
+   position:relative;
+   overflow: hidden;
+   height: 100%;
+    margin: 0;
+   padding: 0;
+   overflow: hidden;
+   top: 0px;
+}
+#body {
+   padding:2vw;
+   min-height: 60%;
+    background-color: tan;
+   padding-bottom: 30vw;   /* Height of the footer */
+}
+    #headerStyle{
+         background-color: #263238;
+         color: white;
+         text-align: center;
+         font-size: 11vw;
+         font-family: 'Yanone Kaffeesatz', fantasy;
+        display: block;
+        width: auto;
+        height: 21vw;
+        margin-top: -11vw;
+        vertical-align: middle;
+        } 
+        #headerStyle2{
+         background-color: #78a335;
+         color: white;
+         text-align: center;
+         font-size: 6vw;
+         font-family: 'Yanone Kaffeesatz', sans-serif;
+        display: block;
+        width: auto;
+        padding-top: 0.8vw;
+        height: 14vw;
+        vertical-align: middle;
+        } 
+         #headerStyle3{
+         background-color: #78a335;
+         color: white;
+         text-align: center;
+         font-size: 4vw;
+         font-family: 'Yanone Kaffeesatz', sans-serif;
+        display: block;
+        width: auto;
+        height: 8vw;
+        padding-top: 1vw;
+        margin-top: -0.1vw;
+        } 
+        #headerStyle p{
+            padding-top: 4vw;
+        }
+        .goal{
+            color: white;
+            text-align: center;
+            font-family: cursive;
+            height: 15vw;
+            width: auto;
+            font-size: 9vw;
+            padding: 0;
+            margin-top: -12vw;
+            margin-bottom: 11vw;
+        }
+        .goal p2{
+            font-size: 7vw;
+            
+        }
+    /*thermometer styling idea inspired by James Jester on Codepen*/
+    #main{
+      width:100%;
+      height: auto;
+      background-color: tan;
+      position: relative;
+      padding: 0;
+     }
+
+    #thermometer{
+      width: 7.2vw;
+      margin: 3% auto;
+    }
+    #stem{
+      width: 4.2vw;
+      height: 65vw;
+      position: relative;
+      left: 0.95625vw;
+      z-index: 1;
+      border-radius: 6.25vw 6.25vw 0 0;
+      border-left: 0.8vw solid black;
+      border-top: 0.8vw solid black;
+      border-right: 0.8vw solid black;
+      animation-name: stem;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    #marks{
+      width: 1.25vw;
+      height: 0.1625vw;
+      position: relative;
+      bottom: 63vw;
+      left: 1vw;
+      z-index: 40;
+        font-size: 8.8vw;
+    }
+
+    #line{
+      line-height: 5.3vw;
+      
+    }
+
+    #merc-stem{
+        width: 2.5vw;
+      height: 20.625vw;
+
+      position: relative;
+      bottom: 36.875vw;
+      left: 2.4vw;
+    }
+    #mercury{
+      width: 4.35vw;
+      height: 10.625vw;
+      position: relative;
+      bottom: -104%;
+      z-index: 20;
+      left: -0.7375vw;
+      background-color: #2ac336;
+      animation-name: mercury;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+    }
+
+    #bulb{
+      position: relative;
+    /*   overflow: hidden; */
+      bottom: 27.5vw;
+      z-index: 10;
+      width: 12vw;
+      height: 12vw;
+      left: -2.875vw;
+      background-color: #2ac336;
+      border-radius: 10.25vw;
+      border: 0.8vw solid black;
+      animation-name: bulb;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+    }
+
+    #text {
+      text-align: center;
+      position: relative;
+      height: 21.5vw;
+        background-color: tan;
+        top: -1.625vw;
+        padding: 0;
+    }
+
+    h1{
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 5vw;
+      color: white;
+    }
+    #one{
+      width: 65vw;
+    }
+
+    #two{
+      width: 32.5vw;
+    }
+    @keyframes mercury {
+       from {background-color: #b71c1c; height: 5.625vw;  bottom: -160%;};
+      to {background-color: #2ac336; height: 5.625vw;  bottom: -104%;};
+     } 
+    @keyframes bulb {
+      from {background-color:#b71c1c};
+      to {background-color: #2ac336;};
+    }
+        p5{
+            color: blue;
+            animation-name: changetext;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+        }
+    @keyframes changetext{
+      0%{color: blue;}
+                50%{color: #de2f2f;}
+        100%{color: #3838d4;}
+    }
+    
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height: 30vw;   /* Height of the footer */
+   background:none;
+    text-align: center;
+    padding-bottom: 4.25vw;
+    background: #263238;
+}
+#footer .footer-box{
+    width: 100%;
+    margin: auto;
+}
+#footer .footer-box p{
+    color: #fff;
+    font-size: 4vw;
+}    
+    }
+       
+    @media only screen and (min-width: 61.26em){
+          #headerStyle{
+         background-color: #263238;
+         color: white;
+         text-align: center;
+         font-size: 35px;
+         font-family: 'Yanone Kaffeesatz', fantasy;
+        display: block;
+        width: auto;
+        height: 80px;
+        vertical-align: middle;
+        } 
+        #headerStyle2{
+         background-color: #78a335;
+         color: white;
+         text-align: center;
+         font-size: 25px;
+         font-family: 'Yanone Kaffeesatz', sans-serif;
+        display: block;
+        width: auto;
+        padding-top: 5px;
+        height: 60px;
+        vertical-align: middle;
+        } 
+         #headerStyle3{
+         background-color: #78a335;
+         color: white;
+         text-align: center;
+         font-size: 15px;
+         font-family: 'Yanone Kaffeesatz', sans-serif;
+        display: block;
+        width: auto;
+        height: 25px;
+        
+        } 
+        #headerStyle p{
+            padding-top: 20px;
+        }
+        body{
+      margin: 0;
+      background-color: tan;
+      height: 100%;
+    }
+        .goal{
+            color: white;
+            text-align: center;
+            font-family: cursive;
+            height: 40px;
+            width: auto;
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        .goal p2{
+            font-size: 50px;
+            
+        }
+    /*thermometer styling idea inspired by James Jester on Codepen*/
+    #main{
+      width:100%;
+      height: auto;
+      background-color: tan;
+      position: relative;
+      padding: 0;
+     }
+
+    #thermometer{
+      width: 70px;
+      margin: 3% auto;
+    }
+
+    #stem{
+      width: 20px;
+      height: 230px;
+      position: relative;
+      left: 21px;
+      z-index: 1;
+      border-radius: 50px 50px 0 0;
+      border-left: 4px solid black;
+      border-top: 4px solid black;
+      border-right: 4px solid black;
+      animation-name: stem;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    #marks{
+      width: 20px;
+      height: 90px;
+      position: relative;
+      bottom: 180px;
+      left: 36px;
+      z-index: 40;
+    }
+
+    #line{
+      line-height: 1em;
+    }
+
+    #merc-stem{
+        width: 20px;
+      height: 85px;
+
+      position: relative;
+      bottom: 175px;
+      left: 25px;
+    }
+    #mercury{
+      width: 20px;
+      height: 30px;
+      position: relative;
+      bottom: -57%;
+      z-index: 20;
+      background-color: #2ac336;
+      animation-name: mercury;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+    }
+
+    #bulb{
+      position: relative;
+    /*   overflow: hidden; */
+      bottom: 190px;
+      z-index: 10;
+      width: 60px;
+      height: 60px;
+      background-color: #2ac336;
+      border-radius: 50px;
+      border: 4px solid black;
+      animation-name: bulb;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+    }
+
+    #text {
+      text-align: center;
+      position: relative;
+      bottom: 180px;
+    }
+
+    h1{
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 3em;
+      color: white;
+    }
+    #one{
+      width: 400px;
+    }
+
+    #two{
+      width: 100px;
+    }
+
+    @keyframes mercury {
+       from {background-color: #b71c1c; height: 25px;  bottom: -80%;};
+      to {background-color: #2ac336; height: 25px;  bottom: -57%;};
+     } 
+    @keyframes bulb {
+      from {background-color:#b71c1c};
+      to {background-color: #2ac336;};
+    }
+        p5{
+            color: blue;
+            animation-name: changetext;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+        }
+    @keyframes changetext{
+      0%{color: blue;}
+                50%{color: #de2f2f;}
+        100%{color: #3838d4;}
+    }
+        .container{
+    width: 94%;
+    margin: auto;
+    height: 400px;
+}
+/*footer styling idea inspired by Nojoud on Codepen*/
+#footer {
+    padding: 0px;
+    position:relative;
+   bottom:0;
+   width:100%;
+   height: auto;
+   background:none;
+    text-align: center;
+    background-color: none;
+}
+#footer .footer-box{
+    width: 100%;
+    margin: auto;
+    display: table;
+    background-color: #263238;
+    margin: 0;
+    height: 5vw;
+}
+#footer .footer-box p{
+    color: #fff;
+    font-size: 2vw;
+    margin-top: 1vw; 
+}
+        }
+    
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</style>    
+    
+<div id="container">
+    <header id ="headerStyle">
+    <p>NNHS Prom Fund</p>
+    </header>
+    <div id="headerStyle2">
+    <p1>Churros Coming Soon! Also Dodgeball Tournament</p1>
+    </div>
+    <div id="headerStyle3">
+    <p2><em>-Location for Churros Sale Coming Soon</em></p2>
+    </div>
+   <div id="body">
+    <div class="goal">
+        <p><u>Current Fundraising Goal</u></p>
+    </div>
+    <div id="main" class="container">
+        <div id="thermometer">
+          <div>
+            <div id="stem"></div>
+            <div id="marks"><div id="line">-<br>-<br>-<br>-<br>-<br>-<br>-<br>-<br>-<br>-</div></div>
+            <div id="merc-stem"><div id="mercury"></div></div>
+            <div id="bulb"></div>
+        </div>
+      </div>
+        
+    </div>
+    </div>
+   <div id="footer">
+    <div id="text">
+          <hr id="two">
+          <h1><em>Current Prom State: <p5>WE NEED MORE $</p5></em></h1>
+          <hr id="one">
+        </div>
+    <div class="footer-box">
+          <p>Powered by the Farquhar Bros</p>
+</div>
+    </div>
+</div>
+</html>
